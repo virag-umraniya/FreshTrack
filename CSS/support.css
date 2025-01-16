@@ -1,0 +1,135 @@
+/* Support Section */
+#support {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  #support h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2b6777; /* Dark teal for headings */
+  }
+  
+  .support-content {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .contact-support,
+  .faq {
+    flex: 1 1 calc(50% - 20px);
+    background-color: #f2f2f2; /* Light gray for cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-support h3,
+  .faq h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for headings */
+  }
+  
+  .contact-support p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  #support-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    color: #2b6777; /* Dark teal for labels */
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #2b6777; /* Dark teal for text */
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #52ab98; /* Muted green on focus */
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    background-color: #52ab98; /* Muted green for submit */
+    color: #ffffff; /* White for text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2b6777; /* Dark teal on hover */
+  }
+  
+  /* FAQ Accordion */
+  .accordion-item {
+    margin-bottom: 10px;
+  }
+  
+  .accordion-button {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background-color: #ffffff; /* White for buttons */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2b6777; /* Dark teal for text */
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-button:hover {
+    background-color: #e0f2f1; /* Light teal for hover */
+  }
+  
+  .accordion-panel {
+    padding: 10px;
+    display: none;
+    background-color: #ffffff; /* White for panels */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+  
+  .accordion-item.active .accordion-panel {
+    display: block;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .support-content {
+      flex-direction: column;
+    }
+  
+    .contact-support,
+    .faq {
+      flex: 1 1 100%;
+    }
+  }

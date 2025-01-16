@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FreshTrack - Reduce food waste and maximize efficiency with smart expiry tracking."
+    />
+    <meta
+      name="keywords"
+      content="food waste, expiry tracking, inventory management, sustainability"
+    />
+    <meta name="author" content="FreshTrack" />
+    <title>FreshTrack - Add Product</title>
+    <link rel="stylesheet" href="CSS/header.css"/>
+    <link rel="stylesheet" href="CSS/style.css"/>
+    <link rel="stylesheet" href="CSS/add_product.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="sticky-header">
+      <nav aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
+
+        <div class="nav-container">
+          <!-- Hamburger Menu for Mobile -->
+          <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+
+          <!-- Navigation Links -->
+          <ul class="nav-links">
+            <li><a href="#dashboard" aria-label="Go to Dashboard">Dashboard</a></li>
+            <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+            <li class="dropdown">
+              <a href="#more" aria-label="More options" class="dropdown-toggle"
+                >More <span class="arrow">&#9660;</span></a
+              >
+              <ul class="dropdown-menu">
+                <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+                <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
+                <li><a href="support.html" aria-label="Go to Support">Support</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html" aria-label="Go to About">About</a></li>
+          </ul>
+
+          <!-- Auth Buttons -->
+          <div class="auth-buttons">
+            <button class="login-btn" aria-label="Login">Login</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Add Product Section -->
+    <section id="add-product" class="section" aria-labelledby="add-product-heading">
+      <h2 id="add-product-heading">Add New Product</h2>
+      <form id="product-form">
+        <div class="form-group">
+          <label for="product-name">Product Name</label>
+          <input
+            type="text"
+            id="product-name"
+            name="product-name"
+            placeholder="Enter product name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Expiry Date</label>
+          <input type="date" id="expiry-date" name="expiry-date" required />
+        </div>
+        <div class="form-group">
+          <label for="quantity">Quantity</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            placeholder="Enter quantity"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="category">Category</label>
+          <input
+            type="text"
+            id="category"
+            name="category"
+            placeholder="Enter category (e.g., Dairy, Meat)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="storage-location">Storage Location</label>
+          <input
+            type="text"
+            id="storage-location"
+            name="storage-location"
+            placeholder="Enter storage location (e.g., Fridge, Pantry)"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="purchase-date">Purchase Date</label>
+          <input type="date" id="purchase-date" name="purchase-date" required />
+        </div>
+        <div class="form-group">
+          <label for="brand">Brand/Supplier</label>
+          <input
+            type="text"
+            id="brand"
+            name="brand"
+            placeholder="Enter brand or supplier"
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            id="price"
+            name="price"
+            placeholder="Enter price"
+            step="0.01"
+          />
+        </div>
+        <div class="form-group">
+          <label for="notes">Notes</label>
+          <textarea
+            id="notes"
+            name="notes"
+            placeholder="Add any additional notes"
+            rows="8"
+            cols="71"
+            
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="product-image">Product Image (Optional)</label>
+          <input type="file" id="product-image" name="product-image" accept="image/*" />
+          <img id="image-preview" src="#" alt="Image Preview" style="display: none; max-width: 100px; margin-top: 10px;" />
+        </div>
+        <button type="submit" class="submit-btn">Add Product</button>
+      </form>
+    </section>
+
+    <!-- Product List Section -->
+    <section id="product-list-section" class="section" aria-labelledby="product-list-heading">
+      <h2 id="product-list-heading">Product List</h2>
+      <div id="product-list"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- Footer Columns -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>FreshTrack is your go-to platform for managing products and analytics with ease.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+            <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+            <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+            <li><a href="about.html" aria-label="Go to About">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Subscribe</h3>
+          <p>Stay updated with our latest news and updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter" />
+            <button type="submit" aria-label="Subscribe">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>&copy; 2023 FreshTrack. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="JS/script.js" defer></script>
+    <script src="JS/add_produc.js" defer></script>
+  </body>
+</html>

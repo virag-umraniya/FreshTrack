@@ -1,0 +1,177 @@
+/* Settings Section Styles */
+#settings {
+    background-color: #ffffff; /* White background */
+    padding: 80px 20px;
+}
+
+.settings-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#settings h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for heading */
+}
+
+.settings-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.settings-features {
+    margin-bottom: 40px;
+}
+
+.settings-features h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.feature {
+    background-color: #f2f2f2; /* Light gray for feature cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 36px;
+    color: #52ab98; /* Muted green for icons */
+    margin-bottom: 10px;
+}
+
+.feature h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2b6777; /* Dark teal for feature headings */
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.settings-categories {
+    margin-bottom: 40px;
+}
+
+.settings-categories h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.settings-categories p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.category {
+    background-color: #f2f2f2; /* Light gray for category cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(25% - 40px);
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.category h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2b6777; /* Dark teal for category headings */
+}
+
+.category ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.category ul li {
+    margin-bottom: 10px;
+}
+
+.category ul li a {
+    color: #52ab98; /* Muted green for links */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.category ul li a:hover {
+    color: #2b6777; /* Dark teal on hover */
+}
+
+.settings-cta {
+    margin-bottom: 40px;
+}
+
+.settings-cta h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.settings-cta p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #52ab98; /* Muted green for CTA button */
+    color: #ffffff; /* White for text */
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #2b6777; /* Dark teal on hover */
+}
+
+/* Responsive Design for Settings Section */
+@media (max-width: 768px) {
+    .categories {
+        flex-direction: column;
+    }
+
+    .category {
+        flex: 1 1 100%;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="FreshTrack - Reduce food waste and maximize efficiency with smart expiry tracking."
+    />
+    <meta
+      name="keywords"
+      content="food waste, expiry tracking, inventory management, sustainability"
+    />
+    <meta name="author" content="FreshTrack" />
+    <title>FreshTrack - Smart Expiry Tracking</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="stylesheet" href="CSS/analytics.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
+    <link rel="stylesheet" href="CSS/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="sticky-header">
+      <nav aria-label="Main navigation">
+          <!-- Logo -->
+          <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
+  
+          <div class="nav-container">
+              <!-- Hamburger Menu for Mobile -->
+              <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+                  <span class="hamburger-line"></span>
+              </button>
+      
+              <!-- Navigation Links -->
+              <ul class="nav-links">
+                  <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+                  <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+                  <li class="dropdown">
+                      <a href="#more" aria-label="More options" class="dropdown-toggle">More <span class="arrow">&#9660;</span></a>
+                      <ul class="dropdown-menu">
+                          <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+                          <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
+                          <li><a href="support.html" aria-label="Go to Support">Support</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="about.html" aria-label="Go to About">About</a></li>
+              </ul>
+      
+              <!-- Auth Buttons -->
+              <div class="auth-buttons">
+                  <button class="login-btn" aria-label="Login">Login</button>
+              </div>
+
+          </div>
+      </nav>
+  </header>
+
+    <!-- Analytics Section -->
+    <section id="analytics" class="section" aria-labelledby="analytics-heading">
+      <div class="analytics-content">
+        <h2 id="analytics-heading">Analytics</h2>
+        <p class="analytics-description">
+          FreshTrack's analytics tools provide you with powerful insights to
+          optimize your inventory, reduce waste, and make data-driven decisions.
+          Whether you're tracking waste reduction or analyzing sales trends, our
+          intuitive dashboards and charts make it easy to understand your data
+          and take action.
+        </p>
+
+        <div class="analytics-features">
+          <h3>Key Features of Our Analytics</h3>
+          <div class="feature">
+            <i class="fas fa-chart-pie"></i>
+            <h4>Waste Reduction Tracking</h4>
+            <p>
+              Monitor your progress in reducing food waste with detailed charts
+              and reports. Identify patterns, set goals, and track your success
+              over time.
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-bar"></i>
+            <h4>Sales Insights</h4>
+            <p>
+              Gain a deeper understanding of your sales trends with interactive
+              charts. Analyze product performance, identify top sellers, and
+              optimize your inventory.
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-line"></i>
+            <h4>Inventory Optimization</h4>
+            <p>
+              Use our advanced analytics to optimize your inventory levels.
+              Reduce overstocking, minimize waste, and ensure you always have
+              the right products in stock.
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-bell"></i>
+            <h4>Custom Alerts</h4>
+            <p>
+              Set up custom alerts for key metrics, such as low stock levels or
+              expiring products. Stay informed and take action before issues
+              arise.
+            </p>
+          </div>
+        </div>
+
+        <div class="analytics-charts">
+          <h3>Explore Your Data</h3>
+          <p>
+            Visualize your data with our interactive charts. From waste reduction
+            to sales trends, FreshTrack makes it easy to understand and act on
+            your insights.
+          </p>
+          <div class="charts">
+            <div class="chart" id="waste-chart">
+              <h4>Waste Reduction</h4>
+              <canvas id="wasteCanvas" aria-label="Waste Reduction Chart"></canvas>
+            </div>
+            <div class="chart" id="sales-chart">
+              <h4>Sales Insights</h4>
+              <canvas id="salesCanvas" aria-label="Sales Insights Chart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="analytics-cta">
+          <h3>Unlock the Power of Data</h3>
+          <p>
+            Ready to take your inventory management to the next level? Start
+            using FreshTrack's analytics tools today and make smarter,
+            data-driven decisions.
+          </p>
+          <button class="cta-btn" aria-label="Get Started with Analytics">
+            Get Started
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+          <!-- Footer Columns -->
+          <div class="footer-column">
+              <h3>About Us</h3>
+              <p>FreshTrack is your go-to platform for managing products and analytics with ease.</p>
+          </div>
+          <div class="footer-column">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+                  <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+                  <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+                  <li><a href="about.html" aria-label="Go to About">About</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h3>Subscribe</h3>
+              <p>Stay updated with our latest news and updates.</p>
+              <form class="newsletter-form">
+                  <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+                  <button type="submit" aria-label="Subscribe">Subscribe</button>
+              </form>
+          </div>
+          <div class="footer-column">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                  <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+              </div>
+          </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright">
+          <p>&copy; 2023 FreshTrack. All rights reserved.</p>
+      </div>
+  </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="JS/chart.js" defer></script>
+    <script src="JS/script.js" defer></script>
+  </body>
+</html>

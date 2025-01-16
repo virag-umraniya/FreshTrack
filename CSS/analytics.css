@@ -1,0 +1,156 @@
+/* Analytics Section Styles */
+#analytics {
+    background-color: #ffffff; /* White background */
+    padding: 80px 20px;
+}
+
+.analytics-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#analytics h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for heading */
+}
+
+.analytics-description {
+    font-size: 18px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+.analytics-features {
+    margin-bottom: 40px;
+}
+
+.analytics-features h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.feature {
+    background-color: #f2f2f2; /* Light gray for feature cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature i {
+    font-size: 36px;
+    color: #52ab98; /* Muted green for icons */
+    margin-bottom: 10px;
+}
+
+.feature h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2b6777; /* Dark teal for feature headings */
+}
+
+.feature p {
+    font-size: 16px;
+    color: #666;
+}
+
+.analytics-charts {
+    margin-bottom: 40px;
+}
+
+.analytics-charts h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.analytics-charts p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.chart {
+    background-color: #f2f2f2; /* Light gray for charts */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    min-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.chart h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for chart headings */
+}
+
+.analytics-cta {
+    margin-bottom: 40px;
+}
+
+.analytics-cta h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2b6777; /* Dark teal for subheadings */
+}
+
+.analytics-cta p {
+    font-size: 16px;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.8;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #52ab98; /* Muted green for CTA button */
+    color: #ffffff; /* White for text */
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #2b6777; /* Dark teal on hover */
+}
+
+/* Responsive Design for Analytics Section */
+@media (max-width: 768px) {
+    .charts {
+        flex-direction: column;
+    }
+
+    .chart {
+        flex: 1 1 100%;
+    }
+}
