@@ -1,211 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="FreshTrack - Reduce food waste and maximize efficiency with smart expiry tracking."
-    />
-    <meta
-      name="keywords"
-      content="food waste, expiry tracking, inventory management, sustainability"
-    />
-    <meta name="author" content="FreshTrack" />
-    <title>FreshTrack - Smart Expiry Tracking</title>
-    <link rel="stylesheet" href="CSS/header.css" />
-    <link rel="stylesheet" href="CSS/style.css" />
-    <link rel="stylesheet" href="CSS/setting.css" />
-    <link rel="stylesheet" href="CSS/footer.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <header class="sticky-header">
-      <nav aria-label="Main navigation">
-          <!-- Logo -->
-          <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
-  
-          <div class="nav-container">
-              <!-- Hamburger Menu for Mobile -->
-              <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-                  <span class="hamburger-line"></span>
-                  <span class="hamburger-line"></span>
-                  <span class="hamburger-line"></span>
-              </button>
-      
-              <!-- Navigation Links -->
-              <ul class="nav-links">
-                  <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
-                  <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
-                  <li class="dropdown">
-                      <a href="#more" aria-label="More options" class="dropdown-toggle">More <span class="arrow">&#9660;</span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
-                          <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
-                          <li><a href="support.html" aria-label="Go to Support">Support</a></li>
-                      </ul>
-                  </li>
-                  <li><a href="about.html" aria-label="Go to About">About</a></li>
-              </ul>
-      
-              <!-- Auth Buttons -->
-              <div class="auth-buttons">
-                  <button class="login-btn" aria-label="Login">Login</button>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="FreshTrack - Reduce food waste and maximize efficiency with smart expiry tracking." />
+  <meta name="keywords" content="food waste, expiry tracking, inventory management, sustainability" />
+  <meta name="author" content="FreshTrack" />
+  <title>FreshTrack - Smart Expiry Tracking</title>
+  <link rel="stylesheet" href="CSS/header.css" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <link rel="stylesheet" href="CSS/setting.css" />
+  <link rel="stylesheet" href="CSS/footer.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
 
-          </div>
-      </nav>
-  </header>
+<body>
+  <!-- Header -->
+  <div id="header"></div>
 
-    <!-- Settings Section -->
-    <section id="settings" class="section" aria-labelledby="settings-heading">
-      <div class="settings-content">
-        <h2 id="settings-heading">Settings</h2>
-        <p class="settings-description">
-          Customize your FreshTrack experience and manage your preferences with
-          our easy-to-use settings. From profile management to advanced
-          configurations, everything you need is right here.
+  <!-- Settings Section -->
+  <section id="settings" class="section" aria-labelledby="settings-heading">
+    <div class="settings-content">
+      <h2 id="settings-heading">Settings</h2>
+      <p class="settings-description">
+        Customize your FreshTrack experience and manage your preferences with
+        our easy-to-use settings. From profile management to advanced
+        configurations, everything you need is right here.
+      </p>
+
+      <div class="settings-features">
+        <h3>What Can You Do in Settings?</h3>
+        <div class="feature">
+          <i class="fas fa-user-cog"></i>
+          <h4>User Profile</h4>
+          <p>
+            Update your personal information, change your password, and
+            customize notification preferences to suit your needs.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-boxes"></i>
+          <h4>Inventory Management</h4>
+          <p>
+            Set default expiry alerts, manage product categories, and configure
+            units of measurement for seamless inventory tracking.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-chart-line"></i>
+          <h4>Analytics and Reporting</h4>
+          <p>
+            Customize data ranges, schedule automated reports, and export your
+            analytics data for deeper insights.
+          </p>
+        </div>
+        <div class="feature">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Privacy and Security</h4>
+          <p>
+            Manage your data privacy, enable two-factor authentication, and
+            control app permissions for enhanced security.
+          </p>
+        </div>
+      </div>
+
+      <div class="settings-categories">
+        <h3>Explore Settings</h3>
+        <p>
+          Dive into the different categories below to customize your FreshTrack
+          experience.
         </p>
-
-        <div class="settings-features">
-          <h3>What Can You Do in Settings?</h3>
-          <div class="feature">
-            <i class="fas fa-user-cog"></i>
+        <div class="categories">
+          <div class="category" id="user-profile">
             <h4>User Profile</h4>
-            <p>
-              Update your personal information, change your password, and
-              customize notification preferences to suit your needs.
-            </p>
+            <ul>
+              <li><a href="#profile-info">Profile Information</a></li>
+              <li><a href="#password">Password Management</a></li>
+              <li><a href="#notifications">Notification Preferences</a></li>
+            </ul>
           </div>
-          <div class="feature">
-            <i class="fas fa-boxes"></i>
+          <div class="category" id="inventory-management">
             <h4>Inventory Management</h4>
-            <p>
-              Set default expiry alerts, manage product categories, and configure
-              units of measurement for seamless inventory tracking.
-            </p>
+            <ul>
+              <li><a href="#expiry-alerts">Expiry Alerts</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#units">Units of Measurement</a></li>
+            </ul>
           </div>
-          <div class="feature">
-            <i class="fas fa-chart-line"></i>
+          <div class="category" id="analytics-reporting">
             <h4>Analytics and Reporting</h4>
-            <p>
-              Customize data ranges, schedule automated reports, and export your
-              analytics data for deeper insights.
-            </p>
+            <ul>
+              <li><a href="#data-range">Data Range</a></li>
+              <li><a href="#report-frequency">Report Frequency</a></li>
+              <li><a href="#export-data">Export Data</a></li>
+            </ul>
           </div>
-          <div class="feature">
-            <i class="fas fa-shield-alt"></i>
+          <div class="category" id="privacy-security">
             <h4>Privacy and Security</h4>
-            <p>
-              Manage your data privacy, enable two-factor authentication, and
-              control app permissions for enhanced security.
-            </p>
+            <ul>
+              <li><a href="#data-privacy">Data Privacy</a></li>
+              <li><a href="#security">Security</a></li>
+              <li><a href="#permissions">Permissions</a></li>
+            </ul>
           </div>
         </div>
-
-        <div class="settings-categories">
-          <h3>Explore Settings</h3>
-          <p>
-            Dive into the different categories below to customize your FreshTrack
-            experience.
-          </p>
-          <div class="categories">
-            <div class="category" id="user-profile">
-              <h4>User Profile</h4>
-              <ul>
-                <li><a href="#profile-info">Profile Information</a></li>
-                <li><a href="#password">Password Management</a></li>
-                <li><a href="#notifications">Notification Preferences</a></li>
-              </ul>
-            </div>
-            <div class="category" id="inventory-management">
-              <h4>Inventory Management</h4>
-              <ul>
-                <li><a href="#expiry-alerts">Expiry Alerts</a></li>
-                <li><a href="#categories">Categories</a></li>
-                <li><a href="#units">Units of Measurement</a></li>
-              </ul>
-            </div>
-            <div class="category" id="analytics-reporting">
-              <h4>Analytics and Reporting</h4>
-              <ul>
-                <li><a href="#data-range">Data Range</a></li>
-                <li><a href="#report-frequency">Report Frequency</a></li>
-                <li><a href="#export-data">Export Data</a></li>
-              </ul>
-            </div>
-            <div class="category" id="privacy-security">
-              <h4>Privacy and Security</h4>
-              <ul>
-                <li><a href="#data-privacy">Data Privacy</a></li>
-                <li><a href="#security">Security</a></li>
-                <li><a href="#permissions">Permissions</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="settings-cta">
-          <h3>Need Help?</h3>
-          <p>
-            If you have any questions or need assistance, our support team is
-            here to help. Reach out to us anytime!
-          </p>
-          <button class="cta-btn" aria-label="Contact Support">
-            Contact Support
-          </button>
-        </div>
       </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-container">
-          <!-- Footer Columns -->
-          <div class="footer-column">
-              <h3>About Us</h3>
-              <p>FreshTrack is your go-to platform for managing products and analytics with ease.</p>
-          </div>
-          <div class="footer-column">
-              <h3>Quick Links</h3>
-              <ul>
-                  <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
-                  <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
-                  <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
-                  <li><a href="about.html" aria-label="Go to About">About</a></li>
-              </ul>
-          </div>
-          <div class="footer-column">
-              <h3>Subscribe</h3>
-              <p>Stay updated with our latest news and updates.</p>
-              <form class="newsletter-form">
-                  <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-                  <button type="submit" aria-label="Subscribe">Subscribe</button>
-              </form>
-          </div>
-          <div class="footer-column">
-              <h3>Follow Us</h3>
-              <div class="social-icons">
-                  <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                  <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                  <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                  <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-              </div>
-          </div>
+      <div class="settings-cta">
+        <h3>Need Help?</h3>
+        <p>
+          If you have any questions or need assistance, our support team is
+          here to help. Reach out to us anytime!
+        </p>
+        <button class="cta-btn" aria-label="Contact Support">
+          Contact Support
+        </button>
       </div>
-      <!-- Copyright Section -->
-      <div class="copyright">
-          <p>&copy; 2023 FreshTrack. All rights reserved.</p>
-      </div>
-  </footer>
+    </div>
+  </section>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="JS/script.js" defer></script>
-    <script src="JS/setting.js" defer></script>
-  </body>
+  <!-- Footer -->
+  <div id="footer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="JS/script.js" defer></script>
+  <script src="JS/setting.js" defer></script>
+  <script src="JS/header.js"></script>
+  <script src="JS/footer.js"></script>
+</body>
+
 </html>
