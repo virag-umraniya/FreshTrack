@@ -127,6 +127,22 @@ nav {
     background-color: #1f4e5f;
 }
 
+.auth-buttons .login-btn {
+    padding: 10px 20px;
+    background-color: #52ab98; /* Muted green */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-buttons .login-btn:hover {
+    background-color: #1f4e5f; /* Darker shade of #2b6777 */
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
 

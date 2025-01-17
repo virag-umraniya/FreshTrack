@@ -1,135 +1,177 @@
+/* General Styles */
+:root {
+  --primary-color: #2b6777; /* Dark teal */
+  --secondary-color: #52ab98; /* Muted green */
+  --background-color: #f8f9fa; /* Light gray */
+  --text-color: #333; /* Dark gray */
+  --white: #ffffff;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
 /* Support Section */
 #support {
-    padding: 80px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  #support h2 {
-    font-size: 36px;
-    margin-bottom: 40px;
-    text-align: center;
-    color: #2b6777; /* Dark teal for headings */
-  }
-  
+  padding: 80px 20px;
+  background-color: var(--white);
+}
+
+.support-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#support h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.support-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contact-support,
+.faq {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.contact-support:hover,
+.faq:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-support h3,
+.faq h3 {
+  font-size: 1.75rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+}
+
+.contact-support p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+#support-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 3px rgba(82, 171, 152, 0.1);
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* FAQ Accordion */
+.accordion-item {
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion-button {
+  width: 100%;
+  text-align: left;
+  padding: 15px;
+  background-color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.accordion-button:hover {
+  background-color: var(--background-color);
+}
+
+.accordion-button i {
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.accordion-item.active .accordion-button i {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  padding: 15px;
+  background-color: var(--background-color);
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.6;
+  display: none;
+}
+
+.accordion-item.active .accordion-panel {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .support-content {
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr;
   }
-  
-  .contact-support,
-  .faq {
-    flex: 1 1 calc(50% - 20px);
-    background-color: #f2f2f2; /* Light gray for cards */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-support h3,
-  .faq h3 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #2b6777; /* Dark teal for headings */
-  }
-  
-  .contact-support p {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  #support-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-  
-  .form-group label {
-    font-size: 16px;
-    color: #2b6777; /* Dark teal for labels */
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    color: #2b6777; /* Dark teal for text */
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    outline: none;
-    border-color: #52ab98; /* Muted green on focus */
-  }
-  
-  .submit-btn {
-    padding: 12px 20px;
-    background-color: #52ab98; /* Muted green for submit */
-    color: #ffffff; /* White for text */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover {
-    background-color: #2b6777; /* Dark teal on hover */
-  }
-  
-  /* FAQ Accordion */
-  .accordion-item {
-    margin-bottom: 10px;
-  }
-  
-  .accordion-button {
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    background-color: #ffffff; /* White for buttons */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #2b6777; /* Dark teal for text */
-    transition: background-color 0.3s ease;
-  }
-  
-  .accordion-button:hover {
-    background-color: #e0f2f1; /* Light teal for hover */
-  }
-  
-  .accordion-panel {
-    padding: 10px;
-    display: none;
-    background-color: #ffffff; /* White for panels */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 5px;
-  }
-  
-  .accordion-item.active .accordion-panel {
-    display: block;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .support-content {
-      flex-direction: column;
-    }
-  
-    .contact-support,
-    .faq {
-      flex: 1 1 100%;
-    }
-  }
+}

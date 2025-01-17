@@ -25,43 +25,39 @@
 
   <body>
     <!-- Header -->
-<header class="sticky-header">
-  <nav aria-label="Main navigation">
-    <!-- Logo -->
-    <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
+    <header class="sticky-header">
+      <nav aria-label="Main navigation">
+        <!-- Logo -->
+        <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
 
-    <div class="nav-container">
-      <!-- Hamburger Menu for Mobile -->
-      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+          <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+          <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+          <li class="dropdown">
+            <a href="#more" aria-label="More options" class="dropdown-toggle">More <span class="arrow">&#9660;</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+              <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
+              <li><a href="support.html" aria-label="Go to Support">Support</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html" aria-label="Go to About">About</a></li>
+        </ul>
 
-      <!-- Navigation Links -->
-      <ul class="nav-links">
-        <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
-        <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
-        <li class="dropdown">
-          <a href="#more" aria-label="More options" class="dropdown-toggle"
-            >More <span class="arrow">&#9660;</span></a
-          >
-          <ul class="dropdown-menu">
-            <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
-            <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
-            <li><a href="support.html" aria-label="Go to Support">Support</a></li>
-          </ul>
-        </li>
-        <li><a href="about.html" aria-label="Go to About">About</a></li>
-      </ul>
+        <!-- Auth Buttons -->
+        <div class="auth-buttons">
+          <button class="login-btn" aria-label="Login" onclick="window.location.href='login.html'">Login</button>
+        </div>
 
-      <!-- Auth Buttons -->
-      <div class="auth-buttons">
-        <button class="login-btn" aria-label="Login">Login</button>
-      </div>
-    </div>
-  </nav>
-</header>
+        <!-- Hamburger Menu for Mobile -->
+        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </nav>
+    </header>
 
     <!-- Contact Support Section -->
     <section id="contact-support" class="section" aria-labelledby="contact-support-heading">
@@ -134,43 +130,43 @@
 
     <!-- Footer -->
     <footer class="site-footer">
-        <div class="footer-container">
-            <!-- Footer Columns -->
-            <div class="footer-column">
-                <h3>About Us</h3>
-                <p>FreshTrack is your go-to platform for managing products and analytics with ease.</p>
-            </div>
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
-                    <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
-                    <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
-                    <li><a href="about.html" aria-label="Go to About">About</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Subscribe</h3>
-                <p>Stay updated with our latest news and updates.</p>
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
-                    <button type="submit" aria-label="Subscribe">Subscribe</button>
-                </form>
-            </div>
-            <div class="footer-column">
-                <h3>Follow Us</h3>
-                <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <!-- Footer Columns -->
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <p>FreshTrack is your go-to platform for managing products and analytics with ease.</p>
         </div>
-        <!-- Copyright Section -->
-        <div class="copyright">
-            <p>&copy; 2023 FreshTrack. All rights reserved.</p>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+            <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+            <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+            <li><a href="about.html" aria-label="Go to About">About</a></li>
+          </ul>
         </div>
+        <div class="footer-column">
+          <h3>Subscribe</h3>
+          <p>Stay updated with our latest news and updates.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email" aria-label="Email for newsletter">
+            <button type="submit" aria-label="Subscribe">Subscribe</button>
+          </form>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Copyright Section -->
+      <div class="copyright">
+        <p>&copy; 2023 FreshTrack. All rights reserved.</p>
+      </div>
     </footer>
 
     <!-- Scripts -->

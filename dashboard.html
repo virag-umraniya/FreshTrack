@@ -6,11 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FreshTrack Dashboard</title>
     <link rel="stylesheet" href="CSS/header.css">
-    <!-- <link rel="stylesheet" href="styles.css"> -->
     <link rel="stylesheet" href="CSS/dashboard.css">
     <link rel="stylesheet" href="CSS/footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -18,57 +16,59 @@
     <!-- Header -->
     <div id="header"></div>
 
+    <!-- Dashboard Section -->
     <section class="dashboard">
         <div class="dashboard-content">
-            <h2>Dashboard</h2>
-            <p class="dashboard-description">Welcome to your FreshTrack dashboard. Manage your products and track their
-                freshness with ease.</p>
+            <h2 class="dashboard-heading">Dashboard</h2>
+            <p class="dashboard-description">
+                Welcome to your FreshTrack dashboard. Manage your products and track their freshness with ease.
+            </p>
 
             <!-- Overview Section -->
             <section class="overview">
-                <h2>Overview</h2>
+                <h2 class="section-subheading">Overview</h2>
                 <div class="dashboard-overview">
                     <!-- Total Products Card -->
                     <div class="card">
-                        <i class="fas fa-box-open"></i>
-                        <h3>Total Products</h3>
-                        <p>1,234</p>
+                        <i class="fas fa-box-open card-icon"></i>
+                        <h3 class="card-title">Total Products</h3>
+                        <p class="card-value">1,234</p>
                     </div>
 
                     <!-- Fresh Products Card -->
                     <div class="card">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>Fresh Products</h3>
-                        <p>1,000</p>
+                        <i class="fas fa-check-circle card-icon"></i>
+                        <h3 class="card-title">Fresh Products</h3>
+                        <p class="card-value">1,000</p>
                     </div>
 
                     <!-- Expiring Products Card -->
                     <div class="card">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <h3>Expiring Soon</h3>
-                        <p>234</p>
+                        <i class="fas fa-exclamation-triangle card-icon"></i>
+                        <h3 class="card-title">Expiring Soon</h3>
+                        <p class="card-value">234</p>
                     </div>
                 </div>
             </section>
 
             <!-- Recent Activity Section -->
             <section class="recent-activity">
-                <h2>Recent Activity</h2>
+                <h2 class="section-subheading">Recent Activity</h2>
                 <div class="activity-list">
                     <div class="activity-item">
-                        <i class="fas fa-plus-circle"></i>
-                        <p>Added 50 new products</p>
-                        <span>2 hours ago</span>
+                        <i class="fas fa-plus-circle activity-icon"></i>
+                        <p class="activity-text">Added 50 new products</p>
+                        <span class="activity-time">2 hours ago</span>
                     </div>
                     <div class="activity-item">
-                        <i class="fas fa-check-circle"></i>
-                        <p>Marked 20 products as fresh</p>
-                        <span>5 hours ago</span>
+                        <i class="fas fa-check-circle activity-icon"></i>
+                        <p class="activity-text">Marked 20 products as fresh</p>
+                        <span class="activity-time">5 hours ago</span>
                     </div>
                     <div class="activity-item">
-                        <i class="fas fa-trash-alt"></i>
-                        <p>Removed 10 expired products</p>
-                        <span>1 day ago</span>
+                        <i class="fas fa-trash-alt activity-icon"></i>
+                        <p class="activity-text">Removed 10 expired products</p>
+                        <span class="activity-time">1 day ago</span>
                     </div>
                 </div>
             </section>
@@ -80,7 +80,6 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- <script src="scripts.js"></script> -->
     <script src="JS/header.js" defer></script>
     <script src="JS/footer.js" defer></script>
 </body>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshTrack - Demo</title>
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/demo.css">
+    <link rel="stylesheet" href="CSS/footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <nav aria-label="Main navigation">
+            <!-- Logo -->
+            <a href="/" class="logo" aria-label="Go to Homepage">FreshTrack</a>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="dashboard.html" aria-label="Go to Dashboard">Dashboard</a></li>
+                <li><a href="add_product.html" aria-label="Go to Add Products">Add Products</a></li>
+                <li class="dropdown">
+                    <a href="#more" aria-label="More options" class="dropdown-toggle">More <span class="arrow">&#9660;</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="analytics.html" aria-label="Go to Analytics">Analytics</a></li>
+                        <li><a href="setting.html" aria-label="Go to Settings">Settings</a></li>
+                        <li><a href="support.html" aria-label="Go to Support">Support</a></li>
+                    </ul>
+                </li>
+                <li><a href="about.html" aria-label="Go to About">About</a></li>
+            </ul>
+
+            <!-- Auth Buttons -->
+            <div class="auth-buttons">
+                <button class="login-btn" aria-label="Login" onclick="window.location.href='login.html'">Login</button>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Demo Page Section -->
+    <section id="demo-page" class="section" aria-labelledby="demo-page-heading">
+        <h2 id="demo-page-heading" class="section-heading">How to Use FreshTrack</h2>
+        <p class="section-description">
+            Discover how FreshTrack can help you reduce food waste, save money, and contribute to a sustainable future. Follow these simple steps to get started.
+        </p>
+
+        <!-- Demo Steps -->
+        <div class="demo-steps">
+            <!-- Step 1 -->
+            <div class="demo-step">
+                <span class="step-number">1</span>
+                <h3 class="step-title">Add Your Products</h3>
+                <p class="step-description">
+                    Start by adding your food items to FreshTrack. You can manually enter details or scan barcodes for quick and accurate input.
+                </p>
+                <img src="add-products.jpg" alt="Add Products" class="step-image" />
+            </div>
+
+            <!-- Step 2 -->
+            <div class="demo-step">
+                <span class="step-number">2</span>
+                <h3 class="step-title">Track Expiry Dates</h3>
+                <p class="step-description">
+                    FreshTrack automatically tracks the shelf life of your products and updates you in real-time. Stay organized and never miss an expiry date again.
+                </p>
+                <img src="track-expiry.jpg" alt="Track Expiry Dates" class="step-image" />
+            </div>
+
+            <!-- Step 3 -->
+            <div class="demo-step">
+                <span class="step-number">3</span>
+                <h3 class="step-title">Receive Smart Notifications</h3>
+                <p class="step-description">
+                    Get timely reminders about products nearing their expiry. Customize notifications to suit your preferences and take action before it's too late.
+                </p>
+                <img src="smart-notifications.jpg" alt="Smart Notifications" class="step-image" />
+            </div>
+
+            <!-- Step 4 -->
+            <div class="demo-step">
+                <span class="step-number">4</span>
+                <h3 class="step-title">Reduce Waste & Save Money</h3>
+                <p class="step-description">
+                    Use FreshTrack's insights to optimize your inventory, reduce food waste, and save money. Make the most of your groceries and contribute to a healthier planet.
+                </p>
+                <img src="reduce-waste.jpg" alt="Reduce Waste" class="step-image" />
+            </div>
+        </div>
+
+        <!-- Call-to-Action -->
+        <div class="cta-container">
+            <p class="cta-text">Ready to make a difference? Start using FreshTrack today!</p>
+            <a href="signup.html" class="cta-btn">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Scripts -->
+    <script src="JS/header.js" defer></script>
+    <script src="JS/footer.js" defer></script>
+</body>
+
+</html>
