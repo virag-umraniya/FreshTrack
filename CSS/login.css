@@ -1,109 +1,17 @@
-/* Header Styles */
-.sticky-header {
-    background-color: #2b6777; /* Dark teal */
-    padding: 15px 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .sticky-header .logo {
-    color: #ffffff; /* White */
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-  }
-  
-  .nav-links a {
-    color: #ffffff; /* White */
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    color: #52ab98; /* Muted green */
-  }
-  
-  .auth-buttons .login-btn {
-    background-color: #52ab98; /* Muted green */
-    color: #ffffff; /* White */
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .auth-buttons .login-btn:hover {
-    background-color: #1f4e5f; /* Darker teal */
-  }
-  
-  /* Hamburger Menu */
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .hamburger-line {
-    width: 25px;
-    height: 3px;
-    background-color: #ffffff; /* White */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-  
-    .nav-links {
-      display: none;
-      flex-direction: column;
-      background-color: #2b6777; /* Dark teal */
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-      border-radius: 5px;
-    }
-  
-    .nav-links.active {
-      display: flex;
-    }
-  }
-
   /* Login Section */
-.login-section {
+  .login-section {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
     padding: 40px 20px;
-    background-color: #f2f2f2; /* Light gray */
+    background-color: #f2f2f2;
+    /* Light gray */
   }
-  
+
   .login-container {
-    background-color: #ffffff; /* White */
+    background-color: #ffffff;
+    /* White */
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
@@ -111,19 +19,21 @@
     width: 100%;
     text-align: center;
   }
-  
+
   .login-container h2 {
     font-size: 32px;
     margin-bottom: 20px;
-    color: #2b6777; /* Dark teal */
+    color: #2b6777;
+    /* Dark teal */
   }
-  
+
   .login-container p {
     font-size: 16px;
     margin-bottom: 30px;
-    color: #666; /* Dark gray */
+    color: #666;
+    /* Dark gray */
   }
-  
+
   .login-form input {
     width: 100%;
     padding: 12px;
@@ -133,149 +43,57 @@
     font-size: 16px;
     outline: none;
   }
-  
+
   .login-form input:focus {
-    border-color: #52ab98; /* Muted green */
+    border-color: #52ab98;
+    /* Muted green */
   }
-  
+
   .login-form button {
     width: 100%;
     padding: 12px;
-    background-color: #52ab98; /* Muted green */
-    color: #ffffff; /* White */
+    background-color: #52ab98;
+    /* Muted green */
+    color: #ffffff;
+    /* White */
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+
   .login-form button:hover {
-    background-color: #2b6777; /* Dark teal */
+    background-color: #2b6777;
+    /* Dark teal */
   }
-  
+
   .login-form .forgot-password {
     display: block;
     margin-top: 10px;
-    color: #52ab98; /* Muted green */
+    color: #52ab98;
+    /* Muted green */
     text-decoration: none;
     font-size: 14px;
   }
-  
+
   .login-form .forgot-password:hover {
     text-decoration: underline;
   }
-  
+
   .login-form .signup-link {
     margin-top: 20px;
     font-size: 14px;
-    color: #666; /* Dark gray */
-  }
-  
-  .login-form .signup-link a {
-    color: #52ab98; /* Muted green */
-    text-decoration: none;
-  }
-  
-  .login-form .signup-link a:hover {
-    text-decoration: underline;
+    color: #666;
+    /* Dark gray */
   }
 
-  /* Footer Styles */
-.site-footer {
-    background-color: #2b6777; /* Dark teal */
-    color: #ffffff; /* White */
-    padding: 40px 20px;
-    margin-top: 40px;
-  }
-  
-  .footer-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .footer-column {
-    flex: 1 1 200px;
-  }
-  
-  .footer-column h3 {
-    font-size: 20px;
-    margin-bottom: 15px;
-  }
-  
-  .footer-column p {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-  
-  .footer-column ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .footer-column ul li {
-    margin-bottom: 10px;
-  }
-  
-  .footer-column ul li a {
-    color: #ffffff; /* White */
+  .login-form .signup-link a {
+    color: #52ab98;
+    /* Muted green */
     text-decoration: none;
-    transition: color 0.3s ease;
   }
-  
-  .footer-column ul li a:hover {
-    color: #52ab98; /* Muted green */
-  }
-  
-  .newsletter-form {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .newsletter-form input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    outline: none;
-  }
-  
-  .newsletter-form button {
-    background-color: #52ab98; /* Muted green */
-    color: #ffffff; /* White */
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .newsletter-form button:hover {
-    background-color: #1f4e5f; /* Darker teal */
-  }
-  
-  .social-icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .social-icons a {
-    color: #ffffff; /* White */
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icons a:hover {
-    color: #52ab98; /* Muted green */
-  }
-  
-  .copyright {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #ffffff; /* White */
+
+  .login-form .signup-link a:hover {
+    text-decoration: underline;
   }
