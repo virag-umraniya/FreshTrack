@@ -1,86 +1,83 @@
-// signup.js
+// Select the signup form
+const signupForm = document.querySelector('.signup-form');
 
-// DOM Elements
-const signupForm = document.querySelector(".signup-form");
-const fullNameInput = document.querySelector('input[placeholder="Full Name"]');
-const emailInput = document.querySelector('input[type="email"]');
-const passwordInput = document.querySelector('input[type="password"]');
-const confirmPasswordInput = document.querySelector(
-  'input[placeholder="Confirm Password"]'
-);
-const errorMessage = document.createElement("p"); // For displaying errors
-
-// Add error message styling
-errorMessage.style.color = "#ff0000"; // Red color for errors
-errorMessage.style.marginTop = "10px";
-errorMessage.style.textAlign = "center";
-
-// Insert error message after the form
-signupForm.appendChild(errorMessage);
-
-// Form Submission Handler
-signupForm.addEventListener("submit", async (e) => {
+// Add event listener for form submission
+signupForm.addEventListener('submit', async (e) => {
   e.preventDefault(); // Prevent default form submission
 
-  // Clear previous error messages
-  errorMessage.textContent = "";
+  // Collect form data
+  const fullName = signupForm.querySelector('input[placeholder="Full Name"]').value;
+  const email = signupForm.querySelector('input[placeholder="Email"]').value;
+  const password = signupForm.querySelector('input[placeholder="Password"]').value;
+  const confirmPassword = signupForm.querySelector('input[placeholder="Confirm Password"]').value;
 
-  // Basic Validation
-  if (!fullNameInput.value || !emailInput.value || !passwordInput.value || !confirmPasswordInput.value) {
-    errorMessage.textContent = "Please fill in all fields.";
+  // Basic validation: Check if passwords match
+  if (password !== confirmPassword) {
+    alert('Passwords do not match.');
     return;
   }
 
-  if (!validateEmail(emailInput.value)) {
-    errorMessage.textContent = "Please enter a valid email address.";
-    return;
-  }
+  // Prepare data to send to the server
+  const data = {
+    fullName,
+    email,
+    password
+  };
 
-  if (passwordInput.value !== confirmPasswordInput.value) {
-    errorMessage.textContent = "Passwords do not match.";
-    return;
-  }
+  console.log('Signup request data:', data);
 
-  // Simulate API Call (Replace with actual API call)
   try {
-    // Show loading spinner (optional)
-    signupForm.querySelector("button").innerHTML = "Signing up...";
+    // Send POST request to the server
+    const response = await fetch('/api/auth/signup', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const result = await response.json();
+    console.log('Signup response:', result);
 
-    // Replace this with actual API call
-    const response = await fakeSignupAPI(
-      fullNameInput.value,
-      emailInput.value,
-      passwordInput.value
-    );
-
-    if (response.success) {
-      // Redirect to login page or dashboard
-      window.location.href = "/login.html";
+    // Handle server response
+    if (response.ok) {
+      alert('Signup successful! You can now login.');
+      // Optionally redirect to login page
+      window.location.href = 'login.html';
     } else {
-      errorMessage.textContent = response.message || "Sign-up failed. Please try again.";
+      alert('Signup failed: ' + (result.msg || 'Unknown error'));
     }
   } catch (error) {
-    errorMessage.textContent = "An error occurred. Please try again later.";
-  } finally {
-    // Reset button text
-    signupForm.querySelector("button").innerHTML = "Sign Up";
+    console.error('Error during signup:', error);
+    alert('An error occurred during signup. Please try again later.');
   }
 });
 
-// Email Validation Function
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-}
+// document.getElementById('signup-Form').addEventListener('submit', async (event) => {
+//   event.preventDefault();
+//   const fullName = document.getElementById('fullName').value;
+//   const email = document.getElementById('email').value;
+//   const password = document.getElementById('password').value;
+//   const confirmPassword = document.getElementById('confirmPassword').value;
 
-// Fake Sign-Up API (Replace with real API call)
-function fakeSignupAPI(fullName, email, password) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ success: true });
-    }, 1000);
-  });
-}
+//   if (password !== confirmPassword) {
+//     document.getElementById('signupMessage').innerText = 'Passwords do not match.';
+//     return;
+//   }
+
+//   const response = await fetch('http://localhost:3000/api/signup', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ fullName, email, password })
+//   });
+
+//   const data = await response.json();
+//   if (response.ok) {
+//     alert(data.message);
+//     window.location.href = 'login.html';
+//   } else {
+//     document.getElementById('signupMessage').innerText = data.message;
+//   }
+// });

@@ -1,77 +1,72 @@
-// login.js
+// Select the login form
+const loginForm = document.querySelector('.login-form');
 
-// DOM Elements
-const loginForm = document.querySelector(".login-form");
-const emailInput = document.querySelector('input[type="email"]');
-const passwordInput = document.querySelector('input[type="password"]');
-const errorMessage = document.createElement("p"); // For displaying errors
-
-// Add error message styling
-errorMessage.style.color = "#ff0000"; // Red color for errors
-errorMessage.style.marginTop = "10px";
-errorMessage.style.textAlign = "center";
-
-// Insert error message after the form
-loginForm.appendChild(errorMessage);
-
-// Form Submission Handler
-loginForm.addEventListener("submit", async (e) => {
+// Add event listener for form submission
+loginForm.addEventListener('submit', async (e) => {
   e.preventDefault(); // Prevent default form submission
 
-  // Clear previous error messages
-  errorMessage.textContent = "";
+  // Collect form data
+  const email = loginForm.querySelector('input[placeholder="Email"]').value;
+  const password = loginForm.querySelector('input[placeholder="Password"]').value;
 
-  // Basic Validation
-  if (!emailInput.value || !passwordInput.value) {
-    errorMessage.textContent = "Please fill in all fields.";
-    return;
-  }
+  // Prepare data to send to the server
+  const data = {
+    email,
+    password
+  };
 
-  if (!validateEmail(emailInput.value)) {
-    errorMessage.textContent = "Please enter a valid email address.";
-    return;
-  }
+  console.log('Login request data:', data);
 
-  // Simulate API Call (Replace with actual API call)
   try {
-    // Show loading spinner (optional)
-    loginForm.querySelector("button").innerHTML = "Logging in...";
+    // Send POST request to the server
+    const response = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    });
 
-    // Simulate API delay
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    const result = await response.json();
+    console.log('Login response:', result);
 
-    // Replace this with actual API call
-    const response = await fakeLoginAPI(emailInput.value, passwordInput.value);
-
-    if (response.success) {
-      // Redirect to dashboard or home page
-      window.location.href = "/dashboard.html";
+    // Handle server response
+    if (response.ok) {
+      // Store the token in localStorage or another storage mechanism
+      localStorage.setItem('token', result.token);
+      alert('Login successful!');
+      // Optionally redirect to the dashboard or home page
+      window.location.href = '/dashboard.html';
     } else {
-      errorMessage.textContent = response.message || "Login failed. Please try again.";
+      alert('Login failed: ' + (result.msg || 'Unknown error'));
     }
   } catch (error) {
-    errorMessage.textContent = "An error occurred. Please try again later.";
-  } finally {
-    // Reset button text
-    loginForm.querySelector("button").innerHTML = "Sign In";
+    console.error('Error during login:', error);
+    alert('An error occurred during login. Please try again later.');
   }
 });
 
-// Email Validation Function
-function validateEmail(email) {
-  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return regex.test(email);
-}
+// document.getElementById('login-form').addEventListener('submit', async (event) => {
+//   event.preventDefault();
+//   const email = document.getElementById('email').value;
+//   const password = document.getElementById('password').value;
 
-// Fake Login API (Replace with real API call)
-function fakeLoginAPI(email, password) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      if (email === "test@example.com" && password === "password123") {
-        resolve({ success: true });
-      } else {
-        resolve({ success: false, message: "Invalid email or password." });
-      }
-    }, 1000);
-  });
-}
+//   const response = await fetch('http://localhost:3000/api/login', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ email, password })
+//   });
+
+//   const data = await response.json();
+//   if (response.ok) {
+//     // Store token and user data in localStorage or use session
+//     localStorage.setItem('token', data.token);
+//     localStorage.setItem('user', JSON.stringify(data.user));
+//     alert('Login successful!');
+//     window.location.href = 'dashboard.html'; // Redirect to dashboard or home
+//   } else {
+//     document.getElementById('loginMessage').innerText = data.message;
+//   }
+// });
