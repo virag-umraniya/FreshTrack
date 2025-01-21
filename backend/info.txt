@@ -1,1 +1,0 @@
-db.createUser({  user: "freshtrack",  pwd: "#Fresh@Track?123",  roles: [    { role: "readWrite", db: "Fresh_Track" }  ]})
