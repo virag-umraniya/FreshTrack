@@ -4,15 +4,18 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Sticky Header */
-.sticky-header {
+#header {
     position: sticky;
     top: 0;
+    z-index: 1000;
+}
+
+/* Sticky Header */
+.sticky-header {
     background-color: #2b6777;
     color: #ffffff;
     padding: 10px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
 }
 
 /* Navigation */
