@@ -1,3 +1,12 @@
-document.getElementById('footer').innerHTML = fetch('footer.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('footer').innerHTML = data);
+document.addEventListener('DOMContentLoaded', () => {
+    const footerContainer = document.getElementById('footer');
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            footerContainer.innerHTML = data;
+            const yearElement = document.getElementById('footer-year');
+            const currentYear = new Date().getFullYear();
+            yearElement.textContent = currentYear;
+        })
+        .catch(error => console.error('Error loading footer:', error));
+});
